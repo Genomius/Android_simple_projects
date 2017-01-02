@@ -69,14 +69,34 @@ public class GameManager {
     }
 
     private void checkCollision() {
+        SimpleCircle enemyCircleForDelete = null;
+
         for (EnemyCircle enemyCircle : enemyCircles) {
             if (mainCircle.isInterSect(enemyCircle)){
-                gameEnd();
+                if (enemyCircle.isSmallerThan(mainCircle)){
+                    mainCircle.growRadius(enemyCircle);
+
+                    enemyCircles.remove(enemyCircle);
+                    if (enemyCircles.isEmpty()){
+                        gameEnd("YOU WIN!");
+                        return;
+                    }
+
+                    calculateAndSetEnemyCirclesColor();
+
+                    break;
+                }
+                else{
+                    gameEnd("YOU LOSE!");
+                    return;
+                }
             }
         }
     }
 
-    private void gameEnd() {
+    private void gameEnd(String message) {
+        canvasView.showMessage(message);
+
         mainCircle.initRadius();
         initEnemyCircles();
         canvasView.reDraw();

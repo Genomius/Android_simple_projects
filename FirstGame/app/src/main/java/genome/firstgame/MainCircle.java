@@ -22,4 +22,10 @@ public class MainCircle extends SimpleCircle{
     public void initRadius() {
         radius = INIT_RADIUS;
     }
+    
+    public void growRadius(SimpleCircle enemyCircle) {
+        // pi * newr ^ 2 == pi * r ^ 2 + pi * reat ^ 2;
+        // newr = sqrt(r ^ 2 + reat ^ 2);
+        radius = (int) Math.sqrt(Math.pow(radius, 2) + Math.pow(enemyCircle.radius, 2));
+    }
 }
