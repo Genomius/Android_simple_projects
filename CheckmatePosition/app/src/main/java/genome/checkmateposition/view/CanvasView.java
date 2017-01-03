@@ -1,15 +1,18 @@
-package genome.checkmateposition;
+package genome.checkmateposition.view;
 
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.*;
-import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.View;
+import genome.checkmateposition.Chessboard;
+import genome.checkmateposition.Chessman;
+import genome.checkmateposition.GameManager;
+import genome.checkmateposition.interfaces.ICanvasView;
 
 import java.util.List;
 
-public class CanvasView extends View implements ICanvasView{
+public class CanvasView extends View implements ICanvasView {
     private GameManager gameManager;
     private Canvas canvas;
     Paint paint;

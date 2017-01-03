@@ -1,0 +1,7 @@
+C1 black king
+F1 white king
+C2 black pawn
+C3 black pawn
+D2 white knight
+F2 white knight
+H6 white queen

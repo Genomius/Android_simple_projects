@@ -1,4 +1,4 @@
-package genome.checkmateposition;
+package genome.checkmateposition.interfaces;
 
 public interface IChessman {
     enum Chessmen{

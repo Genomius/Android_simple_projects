@@ -1,12 +1,10 @@
 package genome.checkmateposition;
 
-import android.graphics.Bitmap;
-import android.graphics.Color;
-import android.graphics.drawable.BitmapDrawable;
+import genome.checkmateposition.interfaces.IChessman;
 
-public class Chessman implements IChessman{
+public class Chessman implements IChessman {
     protected int sprite;
-    protected enum Side { WHITE, BLACK };
+    public enum Side { WHITE, BLACK };
     private int positionX;
     private int positionY;
     private Side side;

@@ -12,5 +12,5 @@
         android:background="@color/backgroundColor"
         tools:context="genome.checkmateposition.MainActivity">
 
-    <genome.checkmateposition.CanvasView android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <genome.checkmateposition.view.CanvasView android:layout_width="match_parent" android:layout_height="match_parent"/>
 </RelativeLayout>
